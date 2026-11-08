@@ -27,6 +27,7 @@ function MarketProvider({ children }) {
         return {exito : true}
     }
 
+    // Funcion para actualizar stock de articulo
     const actualizarStock = (id, cantidad) => {
         setArticulos((actuales) => actuales.map((articulo) => (
             articulo.id === id
