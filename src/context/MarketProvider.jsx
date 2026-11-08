@@ -1,14 +1,21 @@
 import { useState } from 'react'
 import MarketContext from './MarketContext'
-import articulosIniciales from '../data/articulos.json'
+import articulosIniciales from '../data/categorias.json'
 
 // Carga lista de articulos desde el archivo JSON
 function construirEstadoInicial() {
-    return articulosIniciales.map((articulo) => ({
-        ...articulo,
-        id: crypto.randomUUID(),
-        stock: Number(articulo.stock ?? 0) // Si no tiene stock definido, se usa 0 por defecto
-    }))
+    const articulos = []
+    articulosIniciales.forEach((categoria) => {
+        categoria.productos.forEach((articulo) => {
+            articulos.push({
+                ...articulo,
+                id: crypto.randomUUID(),
+                categoria : categoria.nombre,
+                stock: Number(articulo.stock ?? 0) // Si no tiene stock definido, se usa 0 por defecto
+            })
+        })
+    })
+    return articulos
 }
 
 function MarketProvider({ children }) {

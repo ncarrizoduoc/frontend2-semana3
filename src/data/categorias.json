@@ -1,39 +1,183 @@
 [
     {
         "nombre" : "Frutas y verduras",
-        "img" : "https://picsum.photos/seed/frutas/400/400"
+        "img" : "https://picsum.photos/seed/frutas/400/400",
+        "productos" : [
+            {
+                "nombre" : "Bolsa manzana 1 KG",
+                "marca" : "Granny Smith",
+                "url" : "https://picsum.photos/seed/manzana/300/300",
+                "stock" : 25,
+                "precio" : 1690
+            },
+            {
+                "nombre" : "Brocoli",
+                "marca" : "Minuto verde",
+                "url" : "https://picsum.photos/seed/brocoli/300/300",
+                "stock" : 25,
+                "precio" : 1990
+            }
+        ]
     },
     {
         "nombre" : "Abarrotes",
-        "img" : "https://picsum.photos/seed/abarrotes/400/400"
+        "img" : "https://picsum.photos/seed/abarrotes/400/400",
+        "productos" : [
+            {
+                "nombre" : "Arroz G1 1 KG",
+                "marca" : "Miraflores",
+                "url" : "https://picsum.photos/seed/arroz/300/300",
+                "stock" : 175,
+                "precio" : 2690
+            },
+            {
+                "nombre" : "Aceite de girasol 1 L",
+                "marca" : "Cocinero",
+                "url" : "https://picsum.photos/seed/aceite/300/300",
+                "stock" : 100,
+                "precio" : 2890
+            }
+        ]
     },
     {
         "nombre" : "Electrohogar",
-        "img" : "https://picsum.photos/seed/electrohogar/400/400"
+        "img" : "https://picsum.photos/seed/electrohogar/400/400",
+        "productos" : [
+            {
+                "nombre" : "Tostador TH-2200",
+                "marca" : "Thomas",
+                "url" : "https://picsum.photos/seed/tostador/300/300",
+                "stock" : 20,
+                "precio" : 19990
+            },
+            {
+                "nombre" : "Licuadora XTrem",
+                "marca" : "Oster",
+                "url" : "https://picsum.photos/seed/licuadora/300/300",
+                "stock" : 15,
+                "precio" : 45990
+            }
+        ]
     },
     {
         "nombre" : "Cocina",
-        "img" : "https://picsum.photos/seed/cocina/400/400"
+        "img" : "https://picsum.photos/seed/cocina/400/400",
+        "productos" : [
+            {
+                "nombre" : "Sarten antiadherente 24 cm",
+                "marca" : "T-Fal",
+                "url" : "https://picsum.photos/seed/sarten/300/300",
+                "stock" : 30,
+                "precio" : 13990
+            },
+            {
+                "nombre" : "Olla a presión 6 L",
+                "marca" : "Magefesa",
+                "url" : "https://picsum.photos/seed/olla/300/300",
+                "stock" : 10,
+                "precio" : 24990
+            }
+        ]
     },
     {
         "nombre" : "Carnes y pescados",
-        "img" : "https://picsum.photos/seed/carnes/400/400"
+        "img" : "https://picsum.photos/seed/carnes/400/400",
+        "productos" : [
+            {
+                "nombre" : "Jamón serrano 100g",
+                "marca" : "PF",
+                "url" : "https://picsum.photos/seed/jamon/300/300",
+                "stock" : 100,
+                "precio" : 2590
+            },
+            {
+                "nombre" : "Salmón fresco 500 g",
+                "marca" : "Pesca del día",
+                "url" : "https://picsum.photos/seed/salmon/300/300",
+                "stock" : 50,
+                "precio" : 10990
+            }
+        ]
     },
     {
         "nombre" : "Limpieza",
-        "img" : "https://picsum.photos/seed/limpieza/400/400"
+        "img" : "https://picsum.photos/seed/limpieza/400/400",
+        "productos" : [
+            {
+                "nombre" : "Detergente líquido 1 L",
+                "marca" : "Ariel",
+                "url" : "https://picsum.photos/seed/detergente/300/300",
+                "stock" : 200,
+                "precio" : 6390
+            },
+            {
+                "nombre" : "Limpiador multiusos 500 ml",
+                "marca" : "Mr. Clean",
+                "url" : "https://picsum.photos/seed/limpiador/300/300",
+                "stock" : 150,
+                "precio" : 1990
+            }
+        ]
     },
     {
         "nombre" : "Mundo bebé",
-        "img" : "https://picsum.photos/seed/bebe/400/400"
+        "img" : "https://picsum.photos/seed/bebe/400/400",
+        "productos" : [
+            {
+                "nombre" : "Pañales talla M",
+                "marca" : "Huggies",
+                "url" : "https://picsum.photos/seed/panales/300/300",
+                "stock" : 80,
+                "precio" : 30990
+            },
+            {
+                "nombre" : "Biberón 250 ml",
+                "marca" : "Chicco",
+                "url" : "https://picsum.photos/seed/biberon/300/300",
+                "stock" : 60,
+                "precio" : 4990
+            }
+        ]
     },
     {
         "nombre" : "Juguetes",
-        "img" : "https://picsum.photos/seed/juguetes/400/400"
+        "img" : "https://picsum.photos/seed/juguetes/400/400",
+        "productos" : [
+            {
+                "nombre" : "Auto de carreras coleccionable",
+                "marca" : "HotWheels",
+                "url" : "https://picsum.photos/seed/auto/300/300",
+                "stock" : 50,
+                "precio" : 990
+            },
+            {
+                "nombre" : "Muñeca articulada 30 cm",
+                "marca" : "Barbie",
+                "url" : "https://picsum.photos/seed/muneca/300/300",
+                "stock" : 40,
+                "precio" : 15990
+            }
+        ]
     },
     {
         "nombre" : "Otros",
-        "img" : "https://picsum.photos/seed/otros/400/400"
+        "img" : "https://picsum.photos/seed/otros/400/400",
+        "productos" : [
+            {
+                "nombre" : "Libro de recetas",
+                "marca" : "Cocina Fácil",
+                "url" : "https://picsum.photos/seed/libro/300/300",
+                "stock" : 30,
+                "precio" : 9990
+            },
+            {
+                "nombre" : "Set de herramientas 10 piezas",
+                "marca" : "Black & Decker",
+                "url" : "https://picsum.photos/seed/herramientas/300/300",
+                "stock" : 15,
+                "precio" : 29990
+            }
+        ]
     }
 
 ]

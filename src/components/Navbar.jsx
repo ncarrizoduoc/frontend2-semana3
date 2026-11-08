@@ -37,6 +37,11 @@ function Navbar() {
                             </NavLink>
                         </li>
                         <li>
+                            <NavLink to="/productos" end onClick={() => setIsOpen(false)} className={({ isActive }) => `block rounded px-3 py-2 ${isActive ? 'bg-gray-700 text-white' : 'text-gray-800 hover:bg-gray-200'}`}>
+                                Productos
+                            </NavLink>
+                        </li>
+                        <li>
                             <NavLink to="/nuestras-tiendas" onClick={() => setIsOpen(false)} className={({ isActive }) => `block rounded px-3 py-2 ${isActive ? 'bg-gray-700 text-white' : 'text-gray-800 hover:bg-gray-200'}`}>
                                 Nuestras tiendas
                             </NavLink>

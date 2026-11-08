@@ -17,7 +17,7 @@ function Inicio() {
                             className="block h-[180px] w-full object-cover md:h-full md:min-h-[240px]"
                             alt="Imagen de frutas"
                         />
-                        <div className="flex flex-col justify-center bg-gray-50 p-5">
+                        <div className="flex flex-col justify-center items-center bg-gray-50 p-5">
                             <h2 className="text-gray-900">Conoce nuestro catálogo</h2>
                             <p className="mb-3 text-gray-700">
                                 Trabajamos para ofrecerte los mejores productos del mercado a precios insuperables.

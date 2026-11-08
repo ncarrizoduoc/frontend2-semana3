@@ -8,6 +8,7 @@ import './App.css'
 import NuevoArticulo from './pages/NuevoArticulo'
 import MarketProvider from './context/MarketProvider'
 import Inventario from './pages/Inventario'
+import Productos from './pages/Productos'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
             <Route path='/preguntas-frecuentes' element={<PreguntasFrecuentes />}/>
             <Route path='/inventario' element={<Inventario />}/>
             <Route path='/nuevo-articulo' element={<NuevoArticulo />}/>
+            <Route path='/productos' element={<Productos />}/>
           </Routes>
         </main>
         
