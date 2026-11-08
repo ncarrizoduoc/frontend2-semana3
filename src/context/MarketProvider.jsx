@@ -4,7 +4,11 @@ import articulosIniciales from '../data/articulos.json'
 
 // Carga lista de articulos desde el archivo JSON
 function construirEstadoInicial() {
-    return articulosIniciales.map((articulo) => ({...articulo}))
+    return articulosIniciales.map((articulo) => ({
+        ...articulo,
+        id: crypto.randomUUID(),
+        stock: articulo.stock ?? 0 // Si no tiene stock definido, se usa 0 por defecto
+    }))
 }
 
 function MarketProvider({ children }) {
@@ -13,8 +17,9 @@ function MarketProvider({ children }) {
     // Funcion para agregar un articulo al inventario
     const agregarArticulo = (articulo) => {
         const nuevoArticulo = {
+            ...articulo,
             id: crypto.randomUUID(),
-            ...articulo
+            stock: 0
         }
 
         setArticulos((previos) => [...previos, nuevoArticulo])
@@ -22,9 +27,17 @@ function MarketProvider({ children }) {
         return {exito : true}
     }
 
-    // Disponibilizar lista de articulos y funcion agregarArticulo a todos los componentes "hijos"
+    const actualizarStock = (id, cantidad) => {
+        setArticulos((actuales) => actuales.map((articulo) => (
+            articulo.id === id
+                ? { ...articulo, stock: Math.max(0, articulo.stock + cantidad) }
+                : articulo
+        )))
+    }
+
+    // Disponibilizar articulos y sus acciones a todos los componentes "hijos"
     return (
-        <MarketContext.Provider value={{ articulos, agregarArticulo }}>
+        <MarketContext.Provider value={{ articulos, agregarArticulo, actualizarStock }}>
             {children}
         </MarketContext.Provider>
     )

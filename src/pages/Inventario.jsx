@@ -1,7 +1,7 @@
 import useMarket from "../hooks/UseMarket"
 
 function Inventario() {
-    const { articulos } = useMarket()
+    const { articulos, actualizarStock } = useMarket()
 
     return (
         <section className="mx-auto w-full max-w-6xl px-4 py-8">
@@ -18,6 +18,7 @@ function Inventario() {
                             <th className="border border-gray-300 px-4 py-3 font-semibold" scope="col">Nombre</th>
                             <th className="border border-gray-300 px-4 py-3 font-semibold" scope="col">Marca</th>
                             <th className="border border-gray-300 px-4 py-3 font-semibold" scope="col">Categoría</th>
+                            <th className="border border-gray-300 px-4 py-3 font-semibold" scope="col">Stock</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -36,12 +37,38 @@ function Inventario() {
                                 <td className="border border-gray-300 px-4 py-3 align-middle">{articulo.nombre}</td>
                                 <td className="border border-gray-300 px-4 py-3 align-middle">{articulo.marca}</td>
                                 <td className="border border-gray-300 px-4 py-3 align-middle">{articulo.categoria}</td>
+                                <td className="border border-gray-300 px-4 py-3 align-middle">
+                                    <div className="flex items-center justify-center gap-2 whitespace-nowrap">
+                                        <button
+                                            type="button"
+                                            className="inline-flex size-8 shrink-0 items-center justify-center rounded-md bg-white text-lg font-medium text-gray-600 shadow-sm transition hover:bg-gray-50 active:scale-95"
+                                            aria-label={`Disminuir stock de ${articulo.nombre}`}
+                                            disabled={articulo.stock === 0}
+                                            onClick={() => actualizarStock(articulo.id, -1)}
+                                        >
+                                            -
+                                        </button>
+
+                                        <span className="inline-block w-6 text-center text-sm font-semibold text-gray-800 select-none">
+                                            {articulo.stock}
+                                        </span>
+
+                                        <button
+                                            type="button"
+                                            className="inline-flex size-8 shrink-0 items-center justify-center rounded-md bg-white text-lg font-medium text-gray-600 shadow-sm transition hover:bg-gray-50 active:scale-95"
+                                            aria-label={`Aumentar stock de ${articulo.nombre}`}
+                                            onClick={() => actualizarStock(articulo.id, 1)}
+                                        >
+                                            +
+                                        </button>
+                                    </div>
+                                </td>
                             </tr>
                         ))}
                     </tbody>
                 </table>
             </div>
-        </section>
+        </section >
     )
 }
 
