@@ -3,6 +3,8 @@ import categorias from '../data/categorias.json'
 import { validarArticulo } from '../util/ValidarArticulo'
 import useMarket from '../hooks/UseMarket'
 
+const getInputClassName = (isValid) => `mt-1 block w-full rounded border bg-white px-3 py-2 text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 ${isValid ? 'border-gray-300 focus:border-amber-500 focus:ring-amber-200' : 'border-red-600 focus:border-red-600 focus:ring-red-200'}`
+
 // Formulario para agregar un nuevo artículo al inventario
 function NuevoArticuloForm() {
 
@@ -64,59 +66,57 @@ function NuevoArticuloForm() {
 
     return (
         <section>
-
-            <form className="container text-start bg-body-secondary border border-warning rounded p-3" onSubmit={submitForm}>
-                <div className="d-flex flex-column gap-2">
-                    <div className="row">
-                        <div className="col-12 col-md-6">
-                            <label htmlFor="nombre" className="form-label">Nombre:</label>
-                            <input
-                                type="text"
-                                value={articulo.nombre}
-                                className={`form-control ${validez.nombre ? '' : 'is-invalid'}`}
-                                id="nombre"
-                                placeholder="Nombre del producto"
-                                onChange={handleChange}
-                            />
-                            <div id="articuloNombreFeedback" className="invalid-feedback">
-                                Debes ingresar un nombre (no más de 150 caracteres).
-                            </div>
-                        </div>
-                        <div className="col-12 col-md-6">
-                            <label htmlFor="marca" className="form-label">Marca:</label>
-                            <input
-                                type="text"
-                                value={articulo.marca}
-                                className={`form-control ${validez.marca ? '' : 'is-invalid'}`}
-                                id="marca"
-                                placeholder="Marca del producto"
-                                onChange={handleChange}
-                            />
-                            <div id="articuloMarcaFeedback" className="invalid-feedback">
-                                Debes ingresar una marca (no más de 50 caracteres).
-                            </div>
-                        </div>
+            <form className="mx-auto w-full max-w-5xl space-y-4 rounded border border-amber-400 bg-gray-100 p-4 text-left" onSubmit={submitForm}>
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                    <div>
+                        <label htmlFor="nombre" className="block text-sm font-medium text-gray-800">Nombre:</label>
+                        <input
+                            type="text"
+                            value={articulo.nombre}
+                            className={getInputClassName(validez.nombre)}
+                            id="nombre"
+                            placeholder="Nombre del producto"
+                            aria-invalid={!validez.nombre}
+                            aria-describedby={!validez.nombre ? 'articuloNombreFeedback' : undefined}
+                            onChange={handleChange}
+                        />
+                        {!validez.nombre && <p id="articuloNombreFeedback" role="alert" className="mt-1 text-sm text-red-700">Debes ingresar un nombre (no más de 150 caracteres).</p>}
                     </div>
-                    <div className="col">
-                        <label htmlFor="url" className="form-label">URL de la imagen:</label>
+                    <div>
+                        <label htmlFor="marca" className="block text-sm font-medium text-gray-800">Marca:</label>
+                        <input
+                            type="text"
+                            value={articulo.marca}
+                            className={getInputClassName(validez.marca)}
+                            id="marca"
+                            placeholder="Marca del producto"
+                            aria-invalid={!validez.marca}
+                            aria-describedby={!validez.marca ? 'articuloMarcaFeedback' : undefined}
+                            onChange={handleChange}
+                        />
+                        {!validez.marca && <p id="articuloMarcaFeedback" role="alert" className="mt-1 text-sm text-red-700">Debes ingresar una marca (no más de 50 caracteres).</p>}
+                    </div>
+                    <div>
+                        <label htmlFor="url" className="block text-sm font-medium text-gray-800">URL de la imagen:</label>
                         <input
                             type="text"
                             value={articulo.url}
-                            className={`form-control ${validez.url ? '' : 'is-invalid'}`}
+                            className={getInputClassName(validez.url)}
                             id="url"
+                            aria-invalid={!validez.url}
+                            aria-describedby={!validez.url ? 'articuloUrlFeedback' : undefined}
                             onChange={handleChange}
                         />
-                        <div id="articuloUrlFeedback" className="invalid-feedback">
-                            Debes ingresar una URL válida.
-                        </div>
+                        {!validez.url && <p id="articuloUrlFeedback" role="alert" className="mt-1 text-sm text-red-700">Debes ingresar una URL válida.</p>}
                     </div>
                     <div>
-                        <label htmlFor="categoria" className="form-label">Categoría:</label>
+                        <label htmlFor="categoria" className="block text-sm font-medium text-gray-800">Categoría:</label>
                         <select
                             value={articulo.categoria}
-                            className={`form-control ${validez.categoria ? '' : 'is-invalid'}`}
-                            aria-label="Categoria form"
+                            className={getInputClassName(validez.categoria)}
                             id="categoria"
+                            aria-invalid={!validez.categoria}
+                            aria-describedby={!validez.categoria ? 'articuloCategoriaFeedback' : undefined}
                             onChange={handleChange}
                         >
                             <option disabled value="">Seleccione una categoría:</option>
@@ -126,22 +126,16 @@ function NuevoArticuloForm() {
                                 </option>
                             ))}
                         </select>
-                        <div id="articuloCategoriaFeedback" className="invalid-feedback">
-                            Debes seleccionar una categoría.
-                        </div>
+                        {!validez.categoria && <p id="articuloCategoriaFeedback" role="alert" className="mt-1 text-sm text-red-700">Debes seleccionar una categoría.</p>}
                     </div>
-                    <div className="row mt-4 gap-4 justify-content-between">
-                        <div className="col-12 col-md-3">
-                            <button type="submit" className="btn btn-warning w-100">
-                                Agregar artículo
-                            </button>
-                        </div>
-                        <div className="col-12 col-md-3">
-                            <button type="button" className="btn btn-danger w-100" onClick={limpiarFormulario}>
-                                Limpiar formulario
-                            </button>
-                        </div>
-                    </div>
+                </div>
+                <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:justify-between">
+                    <button type="submit" className="w-full rounded bg-amber-400 px-4 py-2 font-semibold text-gray-900 hover:bg-amber-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-700 sm:w-auto">
+                        Agregar artículo
+                    </button>
+                    <button type="button" className="w-full rounded bg-red-700 px-4 py-2 font-semibold text-white hover:bg-red-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-700 sm:w-auto" onClick={limpiarFormulario}>
+                        Limpiar formulario
+                    </button>
                 </div>
             </form>
         </section>

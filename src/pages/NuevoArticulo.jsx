@@ -3,8 +3,8 @@ import NuevoArticuloForm from "../components/NuevoArticuloForm"
 
 function NuevoArticulo(){
     return(
-        <div className="my-5">
-            <div className="container mb-3">
+        <div className="my-12">
+            <div className="mx-auto mb-4 w-full max-w-5xl px-4">
                 <h1>Agregar artículo</h1>
                 <p>Rellene el siguiente formulario para agregar un nuevo artículo al inventario</p>
             </div>

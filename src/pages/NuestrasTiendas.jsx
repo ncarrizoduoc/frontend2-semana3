@@ -34,30 +34,28 @@ const tiendas = [
 
 function NuestrasTiendas() {
     return (
-        <section className='nuestras-tiendas'>
-            <h1 className='text-dark'>Nuestras tiendas</h1>
-            <div className='tiendas-cards'>
-                <div className="row row-cols-1 row-cols-md-2 g-4 m-4">
-                    {tiendas.map((tienda) => (
-                        <div className="col">
-                            <div className="card border-2 border-dark">
-                                <img 
-                                    src={tienda.img} 
-                                    className="card-img-top" 
-                                    alt={`Imagen del interior de la sucursal ${tienda.nombre}`} 
-                                />
-                                <div className="card-body">
-                                    <h5 className="card-title">{tienda.nombre}</h5>
-                                    <p className="card-text mb-3">{tienda.direccion}</p>
-                                    <button className='btn btn-secondary text-white'>Cómo llegar</button>
-                                </div>
-                                <div className="card-footer">
-                                    <small className="text-body-secondary">{tienda.nota}</small>
-                                </div>
-                            </div>
+        <section className="mx-auto max-w-6xl px-4 pb-8">
+            <h1>Nuestras tiendas</h1>
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                {tiendas.map((tienda) => (
+                    <article key={tienda.nombre} className="overflow-hidden rounded border-2 border-gray-900 bg-white">
+                        <img
+                            src={tienda.img}
+                            className="block h-[220px] w-full object-cover object-center"
+                            alt={`Imagen del interior de la sucursal ${tienda.nombre}`}
+                        />
+                        <div className="p-4">
+                            <h2 className="text-gray-900">{tienda.nombre}</h2>
+                            <p className="mb-3 text-gray-700">{tienda.direccion}</p>
+                            <button className="rounded bg-gray-700 px-3 py-2 text-white hover:bg-gray-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">
+                                Cómo llegar
+                            </button>
                         </div>
-                    ))}
-                </div>
+                        <div className="border-t border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-600">
+                            {tienda.nota}
+                        </div>
+                    </article>
+                ))}
             </div>
         </section>
     )

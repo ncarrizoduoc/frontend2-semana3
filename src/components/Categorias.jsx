@@ -1,28 +1,25 @@
-import '../css/Categorias.css'
 import categorias from '../data/categorias.json'
 
-import { Link } from "react-router"
+import { Link } from 'react-router'
 
 function Categorias() {
     return (
-        <div>
-            <div class="d-flex flex-container row row-cols-1 row-cols-md-3 g-4 mx-4 mb-4">
+        <div className="grid grid-cols-1 gap-6 px-4 pb-4 md:grid-cols-3">
                 {categorias.map((categoria) => (
-                    <div class="col">
-                        <div class="card categoria-card border-warning border-2 bg-secondary">
-                            <img 
-                                src={categoria.img} 
-                                class="card-img-top" 
-                                alt={`Imagen representativa de la categoria ${categoria.img}`}
-                            />
-                                <div class="card-body">
-                                    <h5 class="card-title text-light mb-3">{categoria.nombre}</h5>
-                                    <Link to='/' className="btn btn-light">Explorar</Link>
-                                </div>
+                    <article key={categoria.nombre} className="overflow-hidden rounded border-2 border-amber-400 bg-gray-700">
+                        <img
+                            src={categoria.img}
+                            className="block h-[220px] w-full object-cover"
+                            alt={`Imagen representativa de ${categoria.nombre}`}
+                        />
+                        <div className="p-4 text-center">
+                            <h3 className="mb-3 text-lg font-semibold text-white">{categoria.nombre}</h3>
+                            <Link to="/" className="inline-flex items-center rounded bg-white px-3 py-2 text-gray-900 hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">
+                                Explorar
+                            </Link>
                         </div>
-                    </div>
+                    </article>
                 ))}
-            </div>
         </div>
     )
 
