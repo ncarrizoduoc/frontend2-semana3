@@ -15,7 +15,8 @@ function NuevoArticuloForm() {
         nombre: '',
         marca: '',
         url: '',
-        categoria: ''
+        categoria: '',
+        stock: '0'
     })
 
     // Variables para validez de campos del form
@@ -23,7 +24,8 @@ function NuevoArticuloForm() {
         nombre: true,
         marca: true,
         url: true,
-        categoria: true
+        categoria: true,
+        stock: true
     })
 
     // Handler que actualiza valores del formulario cada vez que se modifiquen
@@ -38,13 +40,15 @@ function NuevoArticuloForm() {
             nombre: '',
             marca: '',
             url: '',
-            categoria: ''
+            categoria: '',
+            stock : '0'
         })
         setValidez({
             nombre: true,
             marca: true,
             url: true,
-            categoria: true
+            categoria: true,
+            stock: true
         })
     }
 
@@ -127,6 +131,21 @@ function NuevoArticuloForm() {
                             ))}
                         </select>
                         {!validez.categoria && <p id="articuloCategoriaFeedback" role="alert" className="mt-1 text-sm text-red-700">Debes seleccionar una categoría.</p>}
+                    </div>
+                    <div>
+                        <label htmlFor="stock" className="block text-sm font-medium text-gray-800">Stock:</label>
+                        <input
+                            type="number"
+                            min="0"
+                            step="1"
+                            value={articulo.stock}
+                            className={getInputClassName(validez.stock)}
+                            id="stock"
+                            aria-invalid={!validez.stock}
+                            aria-describedby={!validez.stock ? 'articulostockFeedback' : undefined}
+                            onChange={handleChange}
+                        />
+                        {!validez.stock && <p id="articulostockFeedback" role="alert" className="mt-1 text-sm text-red-700">Debes ingresar un stock válida (mayor o igual a 0).</p>}
                     </div>
                 </div>
                 <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:justify-between">

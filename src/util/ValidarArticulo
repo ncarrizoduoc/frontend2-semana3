@@ -1,5 +1,5 @@
 export function validarArticulo(articulo) {
-    const {nombre, marca, url, categoria} = articulo
+    const { nombre, marca, url, categoria, stock } = articulo
 
     return {
         nombre: nombre.length > 0 && nombre.length <= 150,
@@ -15,5 +15,17 @@ export function validarArticulo(articulo) {
             }
         })(),
         categoria: categoria !== '',
+        // Validar que el stock sea un numero mayor o igual a 0
+        stock: (() => {
+            if (
+                (typeof stock !== 'string' && typeof stock !== 'number') ||
+                (typeof stock === 'string' && stock.trim() === '')
+            ) {
+                return false;
+            }
+
+            const num = Number(stock);
+            return Number.isInteger(num) && num >= 0;
+        })()
     }
 }

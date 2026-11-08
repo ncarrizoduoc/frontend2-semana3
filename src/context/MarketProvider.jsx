@@ -7,7 +7,7 @@ function construirEstadoInicial() {
     return articulosIniciales.map((articulo) => ({
         ...articulo,
         id: crypto.randomUUID(),
-        stock: articulo.stock ?? 0 // Si no tiene stock definido, se usa 0 por defecto
+        stock: Number(articulo.stock ?? 0) // Si no tiene stock definido, se usa 0 por defecto
     }))
 }
 
@@ -19,7 +19,7 @@ function MarketProvider({ children }) {
         const nuevoArticulo = {
             ...articulo,
             id: crypto.randomUUID(),
-            stock: 0
+            stock: Number(articulo.stock ?? 0) // Normalizar el valor del input a número
         }
 
         setArticulos((previos) => [...previos, nuevoArticulo])
@@ -31,7 +31,7 @@ function MarketProvider({ children }) {
     const actualizarStock = (id, cantidad) => {
         setArticulos((actuales) => actuales.map((articulo) => (
             articulo.id === id
-                ? { ...articulo, stock: Math.max(0, articulo.stock + cantidad) }
+                ? { ...articulo, stock: Math.max(0, Number(articulo.stock) + cantidad) }
                 : articulo
         )))
     }

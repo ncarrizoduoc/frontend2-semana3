@@ -11,21 +11,21 @@
         "marca" : "Thomas",
         "url" : "https://picsum.photos/seed/tostador/300/300",
         "categoria" : "Electrohogar",
-        "stock" : 50
+        "stock" : 20
     },
     {
         "nombre" : "Auto de carreras coleccionable",
         "marca" : "HotWheels",
         "url" : "https://picsum.photos/seed/auto/300/300",
         "categoria" : "Juguetes",
-        "stock" : 87
+        "stock" : 50
     },
     {
         "nombre" : "Arroz G1 1 KG",
         "marca" : "Miraflores",
         "url" : "https://picsum.photos/seed/arroz/300/300",
         "categoria" : "Abarrotes",
-        "stock" : 250
+        "stock" : 175
     },
     {
         "nombre" : "Bolsa manzana 1 KG",
