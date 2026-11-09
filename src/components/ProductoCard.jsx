@@ -2,7 +2,6 @@ import {Link} from 'react-router'
 import useMarket from '../hooks/UseMarket'
 
 function ProductoCard({ articulo }) {
-    const { agregarAlCarrito } = useMarket()
 
     return (
         <div key={articulo.id} className="h-full bg-gray-100">
@@ -33,12 +32,6 @@ function ProductoCard({ articulo }) {
                     <Link to={`/productos/${articulo.id}`} className="rounded-full bg-black hover:bg-gray-700 px-3 py-2 text-sm font-semibold text-white">
                         Ver detalle
                     </Link>
-                    <button
-                        onClick={() => agregarAlCarrito(articulo)}
-                        className="rounded-full bg-amber-400 hover:bg-amber-500 px-3 py-2 text-sm font-semibold text-gray-700"
-                    >
-                        Agregar al carro
-                    </button>
                 </div>
             </article>
         </div>

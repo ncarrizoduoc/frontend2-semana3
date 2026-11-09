@@ -1,9 +1,22 @@
 import { Link, useParams } from 'react-router'
 import useMarket from '../hooks/UseMarket'
+import { useRef, useState } from 'react'
 
 function DetalleProducto() {
     const { id } = useParams()
     const { articulos, agregarAlCarrito } = useMarket()
+
+    const [showAlert, setShowAlert] = useState(false)
+    const alertTimer = useRef(null)
+
+    const handleAdd = () => {
+        if(articulo.stock <= 0) return
+        agregarAlCarrito(articulo)
+        setShowAlert(true)
+
+        clearTimeout(alertTimer.current)
+        alertTimer.current = setTimeout(() => setShowAlert(false), 2500)
+    }
 
     const articulo = articulos.find((articulo) => String(articulo.id) === String(id))
 
@@ -29,6 +42,12 @@ function DetalleProducto() {
                     >
                         Volver a productos
                     </Link>
+                    {showAlert && (
+                        <div className="mb-4 border-l-4 border-orange-500 bg-orange-100 p-4 text-orange-700" role="status">
+                            <p className="font-bold">Agregado al carrito</p>
+                            <p>{articulo.nombre}</p>
+                        </div>
+                    )}
                     <div className="w-full lg:flex">
                         <img
                             className="h-64 w-full object-cover rounded-t lg:h-auto lg:w-1/2 lg:rounded-t-none lg:rounded-l"
@@ -52,7 +71,9 @@ function DetalleProducto() {
                             </div>
                             <div className="flex items-center justify-end">
                                 <button
-                                    onClick={() => agregarAlCarrito(articulo)}
+                                    type="button"
+                                    disabled={articulo.stock <= 0}
+                                    onClick={handleAdd}
                                     className="rounded bg-gray-700 hover:bg-black text-white font-bold leading-none px-4 py-3"
                                 >
                                     Agregar al carro
