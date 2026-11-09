@@ -119,3 +119,7 @@ code {
   background: var(--code-bg);
 }
 
+button {
+  cursor: pointer
+}
+
