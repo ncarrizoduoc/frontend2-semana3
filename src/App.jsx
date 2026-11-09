@@ -10,6 +10,7 @@ import MarketProvider from './context/MarketProvider'
 import Inventario from './pages/Inventario'
 import Productos from './pages/Productos'
 import Carrito from './pages/Carrito'
+import DetalleProducto from './pages/DetalleProducto'
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
             <Route path='/inventario' element={<Inventario />}/>
             <Route path='/nuevo-articulo' element={<NuevoArticulo />}/>
             <Route path='/productos' element={<Productos />}/>
+            <Route path='/productos/:id' element={<DetalleProducto />}/>
             <Route path='/carrito' element={<Carrito />}/>
           </Routes>
         </main>

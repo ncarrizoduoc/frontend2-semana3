@@ -9,7 +9,7 @@ function Inventario() {
                 <h1>Inventario</h1>
                 <p className="leading-relaxed text-gray-700">La siguiente tabla contiene un listado de todos los productos disponibles en tienda</p>
             </header>
-            <div className="overflow-x-auto rounded border border-2 border-gray-400">
+            <section className="overflow-x-auto rounded border border-2 border-gray-400">
                 <table className="w-full min-w-[640px] border-collapse text-left text-sm text-gray-800">
                     <thead className="bg-gray-100 text-gray-900">
                         <tr>
@@ -67,7 +67,7 @@ function Inventario() {
                         ))}
                     </tbody>
                 </table>
-            </div>
+            </section>
         </section >
     )
 }

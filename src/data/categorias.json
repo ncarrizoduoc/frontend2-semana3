@@ -8,14 +8,16 @@
                 "marca" : "Granny Smith",
                 "url" : "https://picsum.photos/seed/manzana/300/300",
                 "stock" : 25,
-                "precio" : 1690
+                "precio" : 1690,
+                "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus magna justo, eu pellentesque massa sagittis in. Donec id nisi vitae nulla eleifend ultrices. Aliquam elementum ex a felis pharetra, quis interdum erat imperdiet. Nam venenatis dapibus mauris sit amet efficitur. Phasellus eget viverra libero. Integer dapibus elit sapien, pulvinar feugiat augue elementum eget. Pellentesque vitae pharetra nibh."
             },
             {
                 "nombre" : "Brocoli",
                 "marca" : "Minuto verde",
                 "url" : "https://picsum.photos/seed/brocoli/300/300",
                 "stock" : 25,
-                "precio" : 1990
+                "precio" : 1990,
+                "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus magna justo, eu pellentesque massa sagittis in. Donec id nisi vitae nulla eleifend ultrices. Aliquam elementum ex a felis pharetra, quis interdum erat imperdiet. Nam venenatis dapibus mauris sit amet efficitur. Phasellus eget viverra libero. Integer dapibus elit sapien, pulvinar feugiat augue elementum eget. Pellentesque vitae pharetra nibh."
             }
         ]
     },
@@ -28,14 +30,16 @@
                 "marca" : "Miraflores",
                 "url" : "https://picsum.photos/seed/arroz/300/300",
                 "stock" : 175,
-                "precio" : 2690
+                "precio" : 2690,
+                "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus magna justo, eu pellentesque massa sagittis in. Donec id nisi vitae nulla eleifend ultrices. Aliquam elementum ex a felis pharetra, quis interdum erat imperdiet. Nam venenatis dapibus mauris sit amet efficitur. Phasellus eget viverra libero. Integer dapibus elit sapien, pulvinar feugiat augue elementum eget. Pellentesque vitae pharetra nibh."
             },
             {
                 "nombre" : "Aceite de girasol 1 L",
                 "marca" : "Cocinero",
                 "url" : "https://picsum.photos/seed/aceite/300/300",
                 "stock" : 100,
-                "precio" : 2890
+                "precio" : 2890,
+                "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus magna justo, eu pellentesque massa sagittis in. Donec id nisi vitae nulla eleifend ultrices. Aliquam elementum ex a felis pharetra, quis interdum erat imperdiet. Nam venenatis dapibus mauris sit amet efficitur. Phasellus eget viverra libero. Integer dapibus elit sapien, pulvinar feugiat augue elementum eget. Pellentesque vitae pharetra nibh."
             }
         ]
     },
@@ -48,14 +52,16 @@
                 "marca" : "Thomas",
                 "url" : "https://picsum.photos/seed/tostador/300/300",
                 "stock" : 20,
-                "precio" : 19990
+                "precio" : 19990,
+                "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus magna justo, eu pellentesque massa sagittis in. Donec id nisi vitae nulla eleifend ultrices. Aliquam elementum ex a felis pharetra, quis interdum erat imperdiet. Nam venenatis dapibus mauris sit amet efficitur. Phasellus eget viverra libero. Integer dapibus elit sapien, pulvinar feugiat augue elementum eget. Pellentesque vitae pharetra nibh."
             },
             {
                 "nombre" : "Licuadora XTrem",
                 "marca" : "Oster",
                 "url" : "https://picsum.photos/seed/licuadora/300/300",
                 "stock" : 15,
-                "precio" : 45990
+                "precio" : 45990,
+                "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus magna justo, eu pellentesque massa sagittis in. Donec id nisi vitae nulla eleifend ultrices. Aliquam elementum ex a felis pharetra, quis interdum erat imperdiet. Nam venenatis dapibus mauris sit amet efficitur. Phasellus eget viverra libero. Integer dapibus elit sapien, pulvinar feugiat augue elementum eget. Pellentesque vitae pharetra nibh."
             }
         ]
     },
@@ -68,14 +74,16 @@
                 "marca" : "T-Fal",
                 "url" : "https://picsum.photos/seed/sarten/300/300",
                 "stock" : 30,
-                "precio" : 13990
+                "precio" : 13990,
+                "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus magna justo, eu pellentesque massa sagittis in. Donec id nisi vitae nulla eleifend ultrices. Aliquam elementum ex a felis pharetra, quis interdum erat imperdiet. Nam venenatis dapibus mauris sit amet efficitur. Phasellus eget viverra libero. Integer dapibus elit sapien, pulvinar feugiat augue elementum eget. Pellentesque vitae pharetra nibh."
             },
             {
                 "nombre" : "Olla a presión 6 L",
                 "marca" : "Magefesa",
                 "url" : "https://picsum.photos/seed/olla/300/300",
                 "stock" : 10,
-                "precio" : 24990
+                "precio" : 24990,
+                "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus magna justo, eu pellentesque massa sagittis in. Donec id nisi vitae nulla eleifend ultrices. Aliquam elementum ex a felis pharetra, quis interdum erat imperdiet. Nam venenatis dapibus mauris sit amet efficitur. Phasellus eget viverra libero. Integer dapibus elit sapien, pulvinar feugiat augue elementum eget. Pellentesque vitae pharetra nibh."
             }
         ]
     },
@@ -88,14 +96,16 @@
                 "marca" : "PF",
                 "url" : "https://picsum.photos/seed/jamon/300/300",
                 "stock" : 100,
-                "precio" : 2590
+                "precio" : 2590,
+                "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus magna justo, eu pellentesque massa sagittis in. Donec id nisi vitae nulla eleifend ultrices. Aliquam elementum ex a felis pharetra, quis interdum erat imperdiet. Nam venenatis dapibus mauris sit amet efficitur. Phasellus eget viverra libero. Integer dapibus elit sapien, pulvinar feugiat augue elementum eget. Pellentesque vitae pharetra nibh."
             },
             {
                 "nombre" : "Salmón fresco 500 g",
                 "marca" : "Pesca del día",
                 "url" : "https://picsum.photos/seed/salmon/300/300",
                 "stock" : 50,
-                "precio" : 10990
+                "precio" : 10990,
+                "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus magna justo, eu pellentesque massa sagittis in. Donec id nisi vitae nulla eleifend ultrices. Aliquam elementum ex a felis pharetra, quis interdum erat imperdiet. Nam venenatis dapibus mauris sit amet efficitur. Phasellus eget viverra libero. Integer dapibus elit sapien, pulvinar feugiat augue elementum eget. Pellentesque vitae pharetra nibh."
             }
         ]
     },
@@ -108,14 +118,16 @@
                 "marca" : "Ariel",
                 "url" : "https://picsum.photos/seed/detergente/300/300",
                 "stock" : 200,
-                "precio" : 6390
+                "precio" : 6390,
+                "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus magna justo, eu pellentesque massa sagittis in. Donec id nisi vitae nulla eleifend ultrices. Aliquam elementum ex a felis pharetra, quis interdum erat imperdiet. Nam venenatis dapibus mauris sit amet efficitur. Phasellus eget viverra libero. Integer dapibus elit sapien, pulvinar feugiat augue elementum eget. Pellentesque vitae pharetra nibh."
             },
             {
                 "nombre" : "Limpiador multiusos 500 ml",
                 "marca" : "Mr. Clean",
                 "url" : "https://picsum.photos/seed/limpiador/300/300",
                 "stock" : 150,
-                "precio" : 1990
+                "precio" : 1990,
+                "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus magna justo, eu pellentesque massa sagittis in. Donec id nisi vitae nulla eleifend ultrices. Aliquam elementum ex a felis pharetra, quis interdum erat imperdiet. Nam venenatis dapibus mauris sit amet efficitur. Phasellus eget viverra libero. Integer dapibus elit sapien, pulvinar feugiat augue elementum eget. Pellentesque vitae pharetra nibh."
             }
         ]
     },
@@ -128,14 +140,16 @@
                 "marca" : "Huggies",
                 "url" : "https://picsum.photos/seed/panales/300/300",
                 "stock" : 80,
-                "precio" : 30990
+                "precio" : 30990,
+                "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus magna justo, eu pellentesque massa sagittis in. Donec id nisi vitae nulla eleifend ultrices. Aliquam elementum ex a felis pharetra, quis interdum erat imperdiet. Nam venenatis dapibus mauris sit amet efficitur. Phasellus eget viverra libero. Integer dapibus elit sapien, pulvinar feugiat augue elementum eget. Pellentesque vitae pharetra nibh."
             },
             {
                 "nombre" : "Biberón 250 ml",
                 "marca" : "Chicco",
                 "url" : "https://picsum.photos/seed/biberon/300/300",
                 "stock" : 60,
-                "precio" : 4990
+                "precio" : 4990,
+                "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus magna justo, eu pellentesque massa sagittis in. Donec id nisi vitae nulla eleifend ultrices. Aliquam elementum ex a felis pharetra, quis interdum erat imperdiet. Nam venenatis dapibus mauris sit amet efficitur. Phasellus eget viverra libero. Integer dapibus elit sapien, pulvinar feugiat augue elementum eget. Pellentesque vitae pharetra nibh."
             }
         ]
     },
@@ -148,14 +162,16 @@
                 "marca" : "HotWheels",
                 "url" : "https://picsum.photos/seed/auto/300/300",
                 "stock" : 50,
-                "precio" : 990
+                "precio" : 990,
+                "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus magna justo, eu pellentesque massa sagittis in. Donec id nisi vitae nulla eleifend ultrices. Aliquam elementum ex a felis pharetra, quis interdum erat imperdiet. Nam venenatis dapibus mauris sit amet efficitur. Phasellus eget viverra libero. Integer dapibus elit sapien, pulvinar feugiat augue elementum eget. Pellentesque vitae pharetra nibh."
             },
             {
                 "nombre" : "Muñeca articulada 30 cm",
                 "marca" : "Barbie",
                 "url" : "https://picsum.photos/seed/muneca/300/300",
                 "stock" : 40,
-                "precio" : 15990
+                "precio" : 15990,
+                "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus magna justo, eu pellentesque massa sagittis in. Donec id nisi vitae nulla eleifend ultrices. Aliquam elementum ex a felis pharetra, quis interdum erat imperdiet. Nam venenatis dapibus mauris sit amet efficitur. Phasellus eget viverra libero. Integer dapibus elit sapien, pulvinar feugiat augue elementum eget. Pellentesque vitae pharetra nibh."
             }
         ]
     },
@@ -168,14 +184,16 @@
                 "marca" : "Cocina Fácil",
                 "url" : "https://picsum.photos/seed/libro/300/300",
                 "stock" : 30,
-                "precio" : 9990
+                "precio" : 9990,
+                "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus magna justo, eu pellentesque massa sagittis in. Donec id nisi vitae nulla eleifend ultrices. Aliquam elementum ex a felis pharetra, quis interdum erat imperdiet. Nam venenatis dapibus mauris sit amet efficitur. Phasellus eget viverra libero. Integer dapibus elit sapien, pulvinar feugiat augue elementum eget. Pellentesque vitae pharetra nibh."
             },
             {
                 "nombre" : "Set de herramientas 10 piezas",
                 "marca" : "Black & Decker",
                 "url" : "https://picsum.photos/seed/herramientas/300/300",
                 "stock" : 15,
-                "precio" : 29990
+                "precio" : 29990,
+                "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus magna justo, eu pellentesque massa sagittis in. Donec id nisi vitae nulla eleifend ultrices. Aliquam elementum ex a felis pharetra, quis interdum erat imperdiet. Nam venenatis dapibus mauris sit amet efficitur. Phasellus eget viverra libero. Integer dapibus elit sapien, pulvinar feugiat augue elementum eget. Pellentesque vitae pharetra nibh."
             }
         ]
     }

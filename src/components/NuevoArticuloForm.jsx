@@ -17,7 +17,8 @@ function NuevoArticuloForm() {
         url: '',
         categoria: '',
         stock: '0',
-        precio: '0'
+        precio: '0',
+        descripcion: ''
     })
 
     // Variables para validez de campos del form
@@ -27,7 +28,8 @@ function NuevoArticuloForm() {
         url: true,
         categoria: true,
         stock: true,
-        precio: true
+        precio: true,
+        descripcion: true
     })
 
     // Handler que actualiza valores del formulario cada vez que se modifiquen
@@ -43,8 +45,9 @@ function NuevoArticuloForm() {
             marca: '',
             url: '',
             categoria: '',
-            stock : '0',
-            precio : '0'
+            stock: '0',
+            precio: '0',
+            descripcion: true
         })
         setValidez({
             nombre: true,
@@ -52,7 +55,8 @@ function NuevoArticuloForm() {
             url: true,
             categoria: true,
             stock: true,
-            precio : true
+            precio: true,
+            descripcion: true
         })
     }
 
@@ -149,7 +153,7 @@ function NuevoArticuloForm() {
                             aria-describedby={!validez.stock ? 'articulostockFeedback' : undefined}
                             onChange={handleChange}
                         />
-                        {!validez.stock && <p id="articulostockFeedback" role="alert" className="mt-1 text-sm text-red-700">Debes ingresar un stock válida (mayor o igual a 0).</p>}
+                        {!validez.stock && <p id="articulostockFeedback" role="alert" className="mt-1 text-sm text-red-700">Debes ingresar un stock válido (mayor o igual a 0).</p>}
                     </div>
                     <div>
                         <label htmlFor="precio" className="block text-sm font-medium text-gray-800">Precio:</label>
@@ -165,6 +169,24 @@ function NuevoArticuloForm() {
                             onChange={handleChange}
                         />
                         {!validez.precio && <p id="articuloPrecioFeedback" role="alert" className="mt-1 text-sm text-red-700">Debes ingresar un precio válido (mayor a 0).</p>}
+                    </div>
+                    <div className="md:col-span-2">
+                        <label htmlFor="descripcion" className="block text-sm font-medium text-gray-800">
+                            Descripción del producto:
+                        </label>
+                        <textarea
+                            id="descripcion"
+                            rows={4}
+                            maxLength={1000}
+                            placeholder="Ingrese una descripción detallada del producto (máx. 1000 caracteres)"
+                            value={articulo.descripcion}
+                            className={getInputClassName(validez.descripcion)}
+                            aria-invalid={!validez.descripcion}
+                            aria-describedby={!validez.descripcion ? 'articuloDescripcionFeedback' : undefined}
+                            onChange={handleChange}
+                        />
+                        {!validez.descripcion && <p id="articuloDescripcionFeedback" role="alert" className="mt-1 text-sm text-red-700">Debes ingresar una descripción (de hasta 1000 caracteres).</p>}
+
                     </div>
                 </div>
                 <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:justify-between">

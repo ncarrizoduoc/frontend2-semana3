@@ -9,10 +9,7 @@ function Carrito() {
 
     return (
         <>
-            <div>
-                <h1>Carrito</h1>
-            </div>
-
+            <h1>Carrito</h1>
             {carrito.length === 0 ? (
                 <div className="flex flex-col items-center justify-center gap-4 p-6">
                     <p>El carrito está vacío.</p>
