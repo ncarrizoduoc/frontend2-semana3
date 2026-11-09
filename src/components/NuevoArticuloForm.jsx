@@ -16,7 +16,8 @@ function NuevoArticuloForm() {
         marca: '',
         url: '',
         categoria: '',
-        stock: '0'
+        stock: '0',
+        precio: '0'
     })
 
     // Variables para validez de campos del form
@@ -25,7 +26,8 @@ function NuevoArticuloForm() {
         marca: true,
         url: true,
         categoria: true,
-        stock: true
+        stock: true,
+        precio: true
     })
 
     // Handler que actualiza valores del formulario cada vez que se modifiquen
@@ -41,14 +43,16 @@ function NuevoArticuloForm() {
             marca: '',
             url: '',
             categoria: '',
-            stock : '0'
+            stock : '0',
+            precio : '0'
         })
         setValidez({
             nombre: true,
             marca: true,
             url: true,
             categoria: true,
-            stock: true
+            stock: true,
+            precio : true
         })
     }
 
@@ -146,6 +150,21 @@ function NuevoArticuloForm() {
                             onChange={handleChange}
                         />
                         {!validez.stock && <p id="articulostockFeedback" role="alert" className="mt-1 text-sm text-red-700">Debes ingresar un stock válida (mayor o igual a 0).</p>}
+                    </div>
+                    <div>
+                        <label htmlFor="precio" className="block text-sm font-medium text-gray-800">Precio:</label>
+                        <input
+                            type="number"
+                            min="0"
+                            step="10"
+                            value={articulo.precio}
+                            className={getInputClassName(validez.precio)}
+                            id="precio"
+                            aria-invalid={!validez.precio}
+                            aria-describedby={!validez.precio ? 'articuloPrecioFeedback' : undefined}
+                            onChange={handleChange}
+                        />
+                        {!validez.precio && <p id="articuloPrecioFeedback" role="alert" className="mt-1 text-sm text-red-700">Debes ingresar un precio válido (mayor a 0).</p>}
                     </div>
                 </div>
                 <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:justify-between">

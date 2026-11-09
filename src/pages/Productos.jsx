@@ -1,6 +1,7 @@
 import useMarket from "../hooks/UseMarket"
 import { useState } from 'react'
 import CATEGORIAS from '../data/categorias.json'
+import ProductoCard from "../components/ProductoCard"
 
 function Productos() {
     const { articulos } = useMarket()
@@ -35,30 +36,10 @@ function Productos() {
                 </div>
                 <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
                     {articulosFiltrados.map((articulo) => (
-                        <div className="max-w-sm rounded overflow-hidden border-2 border-amber-400 rounded-lg w-full p-2" >
-                            <div>
-
-                            </div>
-                            <div className="flex justify-center">
-                                <div className="flex items-center justify-start h-40 w-40 bg-gray-100">
-                                    <img
-                                        className="h-full w-full object-cover"
-                                        src={articulo.url}
-                                        alt={articulo.nombre}
-                                    />
-                                </div>
-                            </div>
-                            <div className="px-6 py-4 flex flex-col">
-                                <p className="text-gray-800 text-sm bg-gray-200 py-2 mb-3 rounded-lg">{articulo.categoria}</p>
-                                <p className="text-sm">{articulo.marca}</p>
-                                <p className="font-bold text-xl mb-3">{articulo.nombre}</p>
-                                <p className="font-semibold text-gray-700 text-lg">${articulo.precio}</p>
-                            </div>
-                            <div className="flex flex-col gap-2 px-6 pt-2 pb-2">
-                                <span className="inline-block bg-black rounded-full px-3 py-2 text-sm font-semibold text-white mr-2 mb-2">Ver detalle</span>
-                                <span className="inline-block bg-amber-400 rounded-full px-3 py-2 text-sm font-semibold text-gray-700 mr-2 mb-2 ">Agregar al carro</span>
-                            </div>
-                        </div>
+                        <ProductoCard
+                            key={articulo.id ?? `${articulo.nombre}-${articulo.categoria}`}
+                            articulo={articulo}
+                        />
                     ))}
 
                 </div>

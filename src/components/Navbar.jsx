@@ -61,6 +61,11 @@ function Navbar() {
                                 Agregar artículo
                             </NavLink>
                         </li>
+                        <li>
+                            <NavLink to="/carrito" onClick={() => setIsOpen(false)} className={({ isActive }) => `block rounded px-3 py-2 ${isActive ? 'bg-gray-700 text-white' : 'text-gray-800 hover:bg-gray-200'}`}>
+                                Carrito
+                            </NavLink>
+                        </li>
                     </ul>
                 </div>
             </div>

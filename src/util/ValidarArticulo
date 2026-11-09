@@ -1,5 +1,5 @@
 export function validarArticulo(articulo) {
-    const { nombre, marca, url, categoria, stock } = articulo
+    const { nombre, marca, url, categoria, stock, precio } = articulo
 
     return {
         nombre: nombre.length > 0 && nombre.length <= 150,
@@ -26,6 +26,18 @@ export function validarArticulo(articulo) {
 
             const num = Number(stock);
             return Number.isInteger(num) && num >= 0;
+        })(),
+        // Validar que el precio sea un numero mayor a 0
+        precio: (() => {
+            if (
+                (typeof precio !== 'string' && typeof precio !== 'number') ||
+                (typeof precio === 'string' && precio.trim() === '')
+            ) {
+                return false;
+            }
+
+            const num = Number(precio);
+            return Number.isInteger(num) && num > 0;
         })()
     }
 }
