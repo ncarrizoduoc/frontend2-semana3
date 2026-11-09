@@ -24,7 +24,7 @@ function Productos() {
                     <select
                         value={categoriaSeleccionada}
                         onChange={(e) => setCategoriaSeleccionada(e.target.value)}
-                        className="border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                     >
                         <option value="Todas">Todas</option>
                         {CATEGORIAS.map((categoria) => (

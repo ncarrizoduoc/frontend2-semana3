@@ -29,9 +29,9 @@ function Carrito() {
                             ))}
                         </ul>
                     </div>
-                    <div className="self-start items-start lg:col-span-4 rounded-md border border-3 border-gray-300 p-4 divide-y-2 divide-gray-300">
+                    <div className="self-start items-start lg:col-span-4 bg-gray-100 rounded-md border border-3 border-gray-300 p-4 divide-y-2 divide-gray-500">
                         <h2>Resumen del carrito:</h2>
-                        <div className="mt-4 flex flex-col gap-2 items-start">
+                        <div className="mt-4 flex flex-col gap-2 items-start divide-y divide-gray-300">
                             <p>Cantidad de productos: {cantidadProductos}</p>
                             <p className="font-bold text-lg">Subtotal: ${subtotalProductos}</p>
                             <button className="bg-black text-white rounded rounded-2 px-4 py-2">Proceder al pago</button>

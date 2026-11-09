@@ -6,8 +6,8 @@ function CarritoCard({ item }) {
 
     return (
         <div className="w-full">
-            <div className="flex w-full overflow-hidden bg-white shadow-sm">
-                <div className="flex w-32 shrink-0 items-center justify-center overflow-hidden bg-white md:w-40">
+            <div className="flex w-full overflow-hidden bg-gray-100 shadow-sm">
+                <div className="flex w-32 shrink-0 items-center justify-center overflow-hidden md:w-40">
                     <img
                         className="h-32 w-32 object-cover md:h-40 md:w-40 p-3"
                         src={item.url}
@@ -22,7 +22,7 @@ function CarritoCard({ item }) {
                             <p className="mb-2 inline-block rounded bg-amber-400 px-2 py-1 text-sm text-gray-800">
                                 {item.marca}
                             </p>
-                            <p className="text-sm text-gray-500">Quedan {stockDisponible} unidades</p>
+                            <p className="text-sm text-gray-500">{stockDisponible} unidades en stock</p>
                         </div>
                         <h3 className="mb-2 text-xl font-bold text-gray-900">{item.nombre}</h3>
                         <p className="text-base text-gray-700">Precio unitario: ${item.precio}</p>

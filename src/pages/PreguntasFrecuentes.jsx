@@ -10,7 +10,7 @@ function PreguntasFrecuentes() {
 
     return (
         <section className="mx-auto my-8 w-full max-w-4xl px-4">
-            <h1 className="text-gray-900">Preguntas frecuentes</h1>
+            <h1>Preguntas frecuentes</h1>
             <div className="space-y-2">
                 <div className="overflow-hidden rounded border-2 border-gray-500">
                     <h2>

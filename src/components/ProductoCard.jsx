@@ -1,10 +1,11 @@
+import {Link} from 'react-router'
 import useMarket from '../hooks/UseMarket'
 
 function ProductoCard({ articulo }) {
     const { agregarAlCarrito } = useMarket()
 
     return (
-        <div key={articulo.id} className="h-full">
+        <div key={articulo.id} className="h-full bg-gray-100">
             <article className="flex h-full flex-col rounded border-2 border-gray-400 p-2">
                 <div className="flex justify-center">
                     <div className="flex h-40 w-40 items-center justify-center bg-gray-100">
@@ -29,9 +30,9 @@ function ProductoCard({ articulo }) {
                 </div>
 
                 <div className="mt-auto flex flex-col gap-2 px-4 pb-2">
-                    <button className="rounded-full bg-black hover:bg-gray-700 px-3 py-2 text-sm font-semibold text-white">
+                    <Link to={`/productos/${articulo.id}`} className="rounded-full bg-black hover:bg-gray-700 px-3 py-2 text-sm font-semibold text-white">
                         Ver detalle
-                    </button>
+                    </Link>
                     <button
                         onClick={() => agregarAlCarrito(articulo)}
                         className="rounded-full bg-amber-400 hover:bg-amber-500 px-3 py-2 text-sm font-semibold text-gray-700"

@@ -74,7 +74,7 @@ function NuevoArticuloForm() {
 
     return (
         <section>
-            <form className="mx-auto w-full max-w-5xl space-y-4 rounded border border-amber-400 bg-gray-100 p-4 text-left" onSubmit={submitForm}>
+            <form className="mx-auto w-full max-w-5xl space-y-4 rounded border border-2 border-amber-400 bg-gray-100 p-4 text-left" onSubmit={submitForm}>
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                     <div>
                         <label htmlFor="nombre" className="block text-sm font-medium text-gray-800">Nombre:</label>

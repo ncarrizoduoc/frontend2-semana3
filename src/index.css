@@ -2,7 +2,7 @@
 
 :root {
   --text: #08060d;
-  --text-h: black;
+  --text-h: hsl(0, 0%, 15%);
   --bg: #fff;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
