@@ -22,18 +22,19 @@ function ProductoCard({ articulo }) {
                     </p>
                     <p className="text-sm">{articulo.marca}</p>
                     <p className="mb-3 text-xl font-bold">{articulo.nombre}</p>
+                    <p className="mb-2 text-sm text-gray-500">Stock: {articulo.stock}</p>
                     <p className="mt-auto text-lg font-semibold text-gray-700">
                         ${articulo.precio}
                     </p>
                 </div>
 
                 <div className="mt-auto flex flex-col gap-2 px-4 pb-2">
-                    <button className="rounded-full bg-black px-3 py-2 text-sm font-semibold text-white">
+                    <button className="rounded-full bg-black hover:bg-gray-700 px-3 py-2 text-sm font-semibold text-white">
                         Ver detalle
                     </button>
                     <button
                         onClick={() => agregarAlCarrito(articulo)}
-                        className="rounded-full bg-amber-400 px-3 py-2 text-sm font-semibold text-gray-700"
+                        className="rounded-full bg-amber-400 hover:bg-amber-500 px-3 py-2 text-sm font-semibold text-gray-700"
                     >
                         Agregar al carro
                     </button>

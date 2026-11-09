@@ -1,7 +1,8 @@
 import useMarket from "../hooks/UseMarket"
 
 function CarritoCard({ item }) {
-    const { eliminarDelCarrito,  agregarAlCarrito, sustraerDelCarrito} = useMarket()
+    const { articulos, eliminarDelCarrito, agregarAlCarrito, sustraerDelCarrito } = useMarket()
+    const stockDisponible = articulos.find((articulo) => articulo.id === item.id)?.stock ?? item.stock
 
     return (
         <div className="w-full">
@@ -17,11 +18,14 @@ function CarritoCard({ item }) {
 
                 <div className="flex flex-1 flex-col justify-between p-4">
                     <div className="flex flex-col items-start text-left">
-                        <p className="mb-2 inline-block rounded bg-amber-400 px-2 py-1 text-sm text-gray-800">
-                            {item.marca}
-                        </p>
+                        <div className="flex flex-row justify-between w-full">
+                            <p className="mb-2 inline-block rounded bg-amber-400 px-2 py-1 text-sm text-gray-800">
+                                {item.marca}
+                            </p>
+                            <p className="text-sm text-gray-500">Quedan {stockDisponible} unidades</p>
+                        </div>
                         <h3 className="mb-2 text-xl font-bold text-gray-900">{item.nombre}</h3>
-                        <p className="text-base text-gray-700">${item.precio}</p>
+                        <p className="text-base text-gray-700">Precio unitario: ${item.precio}</p>
                     </div>
 
                     <div className="mt-4 flex items-center gap-7">
@@ -54,7 +58,7 @@ function CarritoCard({ item }) {
                         <button
                             type="button"
                             onClick={() => eliminarDelCarrito(item)}
-                            className="rounded border border-gray-300 bg-red-700 text-white px-3 py-2 text-sm font-semibold hover:bg-gray-100"
+                            className="rounded border border-gray-300 bg-red-700 text-white px-3 py-2 text-sm font-semibold hover:bg-red-900"
                         >
                             Eliminar
                         </button>
